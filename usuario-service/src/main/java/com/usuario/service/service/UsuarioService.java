@@ -69,11 +69,12 @@ public class UsuarioService {
         Usuario usuario = usuarioRepository.findById(usuarioId).orElse(null);
 
         if(usuario == null){
-            resultado.put("Mensaje", "El usuario no existe");
+            resultado.put("Mensaje:", "El usuario no existe");
             return resultado;
         }
 
         resultado.put("Usuario", usuario);
+
         List<Carro> carros = carroFeignClient.getCarros(usuarioId);
 
         if(carros.isEmpty()){
@@ -84,6 +85,7 @@ public class UsuarioService {
         }
 
         List<Moto> motos = motoFeignClient.getMotos(usuarioId);
+
         if(motos.isEmpty()){
             resultado.put("Motos", "El usuario no tiene motos");
         }

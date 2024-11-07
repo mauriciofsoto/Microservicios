@@ -13,6 +13,7 @@ public interface CarroFeignClient {
     @PostMapping("/carro")
     public Carro save(@RequestBody Carro carro);
 
-    @GetMapping("/usuario/{usuarioId}")
+    @GetMapping("/carro/usuario/{usuarioId}")
     public List<Carro> getCarros(@PathVariable("usuarioId") int usuario);
+
 }

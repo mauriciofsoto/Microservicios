@@ -81,6 +81,5 @@ public class UsuarioController {
         Map<String, Object> resultado = usuarioService.getUsuarioAndVehiculos(usuarioId);
         return ResponseEntity.ok(resultado);
     }
-
     
 }

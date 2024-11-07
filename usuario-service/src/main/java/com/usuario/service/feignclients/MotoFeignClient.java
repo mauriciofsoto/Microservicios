@@ -1,6 +1,5 @@
 package com.usuario.service.feignclients;
 
-import com.usuario.service.model.Carro;
 import com.usuario.service.model.Moto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
@@ -11,9 +10,10 @@ import java.util.List;
 //@RequestMapping("/moto")
 public interface MotoFeignClient {
 
-    @PostMapping()
+    @PostMapping("/moto")
     public Moto save(@RequestBody Moto moto);
 
-    @GetMapping("/usuario/{usuarioId}")
+    @GetMapping("/moto/usuario/{usuarioId}")
     public List<Moto> getMotos(@PathVariable("usuarioId") int usuario);
+
 }
