@@ -1,6 +1,11 @@
 spring:
   application:
     name: eureka-service
+  config:
+    import: configserver:http://localhost:8081
+  cloud:
+    config:
+      uri: http://localhost:8081 # Asegúrate de que esto apunte a tu config-service
 server:
   port: 8761
 eureka:
