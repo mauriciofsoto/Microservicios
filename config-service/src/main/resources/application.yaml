@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          default-label: multiple-instances
+          default-label: config-server
           uri: https://github.com/Stackft/Microservicios
           search-paths: config-data
   application:
