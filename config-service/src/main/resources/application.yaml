@@ -8,5 +8,9 @@ spring:
           default-label: config-server
           uri: https://github.com/Stackft/Microservicios
           search-paths: config-data
+    discovery:
+      client:
+        service-url:
+          defaultZone: http://localhost:8761/eureka/
   application:
     name: config-service
